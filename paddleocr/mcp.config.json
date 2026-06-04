@@ -1,0 +1,18 @@
+{
+  "_comment": "脱敏模板。云端 Devin 不会自动读取本文件——它只是在 Settings → MCP Marketplace → Add Your Own (STDIO) 里照着填的参考。真实 token 不要写进本文件，填进 MCP 表单的 env 或存为 Devin Secret。",
+  "mcpServers": {
+    "paddleocr": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--script",
+        "https://raw.githubusercontent.com/BamaAleen/devin-mcp-servers/main/paddleocr/server.py"
+      ],
+      "env": {
+        "PADDLEOCR_TOKEN": "<YOUR_PADDLEOCR_TOKEN>",
+        "PADDLEOCR_MODEL": "PaddleOCR-VL-1.5",
+        "PADDLEOCR_JOB_URL": "https://paddleocr.aistudio-app.com/api/v2/ocr/jobs"
+      }
+    }
+  }
+}
